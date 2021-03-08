@@ -22,7 +22,7 @@ const Home = ({navigation}) => {
         <View>
           <View style={styles.header}>
             <Text style={styles.title}>MYSTOCK</Text>
-            <DotVector style={styles.dot} />
+            <DotVector />
           </View>
           <View style={{alignItems: 'center'}}>
             <NesasImage style={styles.pic} />
@@ -40,12 +40,6 @@ const Home = ({navigation}) => {
               <View style={styles.item} />
               <View style={styles.item} />
               <View style={styles.item} />
-              <View style={styles.item} />
-              <View style={styles.item} />
-              <View style={styles.item} />
-              <View style={styles.item} />
-              <View style={styles.item} />
-              <View style={styles.item} />
             </View>
           </View>
         </View>
@@ -54,20 +48,14 @@ const Home = ({navigation}) => {
         <TouchableOpacity onPress={() => navigation.push('Home')}>
           <NavHome style={styles.navicon} />
         </TouchableOpacity>
-        <TouchableOpacity>
-          <NavNotify style={styles.navicon} onPress={() => alert('Notifications Navbar Clicked!')} />
+        <TouchableOpacity onPress={() => navigation.navigate('Notification')}>
+          <NavNotify style={styles.navicon} />
         </TouchableOpacity>
-        <TouchableOpacity>
-          <NavAccount
-            style={styles.navicon}
-            onPress={() => alert('Account Navbar Clicked!')}
-          />
+        <TouchableOpacity onPress={() => navigation.navigate('Account')}>
+          <NavAccount style={styles.navicon} />
         </TouchableOpacity>
-        <TouchableOpacity>
-          <NavSettings
-            style={styles.navicon}
-            onPress={() => alert('Settings Navbar Clicked!')}
-          />
+        <TouchableOpacity onPress={() => navigation.navigate('Settings')}>
+          <NavSettings style={styles.navicon} />
         </TouchableOpacity>
       </View>
     </View>
@@ -82,10 +70,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingTop: 32,
-  },
-  dot: {
-    justifyContent: 'flex-end',
-    alignItems: 'flex-end',
   },
   title: {
     paddingTop: 7,
@@ -139,5 +123,9 @@ const styles = StyleSheet.create({
   navicon: {
     width: 30,
     height: 30,
+  },
+  bottom: {
+    position: 'absolute',
+    bottom: 1,
   },
 });

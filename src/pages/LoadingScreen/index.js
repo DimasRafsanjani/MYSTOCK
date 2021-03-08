@@ -15,7 +15,7 @@ const LoadingScreen = ({navigation}) => {
       <View style={styles.align}>
         <Text style={styles.header}>Selamat Datang di MYSTOCK</Text>
         <Text style={styles.text}>
-          Aplikasi peminjaman alat untuk {'\n'} siswa siswi SMKN 1 Sumedang
+          Aplikasi peminjaman alat untuk siswa siswi SMKN 1 Sumedang
         </Text>
       </View>
       <View style={styles.page}>
@@ -40,8 +40,7 @@ const LoadingScreen1 = ({navigation}) => {
       <View style={styles.align}>
         <Text style={styles.header}>Peminjaman Lebih Efektif dan Cepat</Text>
         <Text style={styles.text}>
-          Peminjaman yang bisa dilakukan lebih {'\n'}efektif yang bisa melihat
-          stoknya {'\n'}
+          Peminjaman yang bisa dilakukan lebih efektif yang bisa melihat stoknya
           terlebih dahulu
         </Text>
       </View>
@@ -84,6 +83,8 @@ const styles = StyleSheet.create({
   align: {
     alignItems: 'center',
     justifyContent: 'center',
+    paddingLeft: 6,
+    paddingRight: 6,
   },
   header: {
     fontFamily: 'Montserrat-Medium',
@@ -95,6 +96,8 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 13,
     textAlign: 'center',
+    paddingLeft: 41,
+    paddingRight: 50,
   },
   page: {
     marginTop: 22,
